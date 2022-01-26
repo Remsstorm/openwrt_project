@@ -19,9 +19,9 @@ config wifi-device 'radio1'
 
 config wifi-iface
 	option device 'radio0'
-	option ssid 'Gogeta'
+	option ssid 'Enterprise-wifi'
 	option encryption 'psk2'
-	option key 'W3lc0m3!'
+	option key 'yourpassword'
 	option mode 'ap'
 	option wds '1'
 	option network 'wifi lan'
@@ -29,7 +29,7 @@ config wifi-iface
 config wifi-iface
 	option device 'radio1'
 	option encryption 'none'
-	option ssid 'Broly-guest'
+	option ssid 'Wifi-guest'
 	option mode 'ap'
 	option wds '1'
 	option network 'guestwifi'
