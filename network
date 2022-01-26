@@ -1,0 +1,35 @@
+
+config interface 'loopback'
+	option ifname 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config globals 'globals'
+	option ula_prefix 'fd3d:91a5:bb26::/48'
+
+config interface 'lan'
+	option type 'static'
+	option ifname 'eth0'
+	option proto 'dhcp'
+	option netmask '255.255.255.0'
+	option ip6assign '60'
+	option dns '10.250.0.16'
+
+config interface 'wifi'
+	option proto 'dhcp'
+	option ifname 'wlan0'
+	option ipaddr '172.0.11.1'
+	option netmask '255.255.255.0'
+	option gateway '172.0.10.1'
+	option dns '10.250.0.16'
+
+config interface 'guestwifi'
+	option type 'bridge'
+	option proto 'dhcp'
+        option ifname 'wlan1'
+	option ipaddr '172.0.12.1'
+	option netmask '255.255.255.0'
+	option gateway '172.0.10.1'
+	option dns '1.1.1.1'
+
